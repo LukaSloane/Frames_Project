@@ -38,23 +38,28 @@ namespace Frames_Project
 
         private void btn_weiter_click(object sender, RoutedEventArgs e)
         {
-            if(validateIBAN())
+            if(validateKonto())
             {
-                Bankaccount konto = new Bankaccount(input_IBAN.Text.ToString());
+                Bankaccount konto = new Bankaccount(input_Name.Text.ToString(), input_IBAN.Text.ToString()); ;
                 this.NavigationService.Navigate(new Uebersicht(products, person, konto));
             }
         }
 
-        private bool validateIBAN()
+        private bool validateKonto()
         {
             Regex rx = new Regex(@"^DE[0-9]{2}(\s)?[0-9]{4}(\s)?[0-9]{4}(\s)?[0-9]{4}(\s)?[0-9]{4}(\s)?[0-9]{2}$");
+            Regex rxName = new Regex(@"^[a-zA-ZäöüÄÖÜß]{2,12}\s[a-zA-ZäöüÄÖÜß]{2,12}(\s[a-zA-ZäöüÄÖÜß]{2,12})?$");
 
-
-            if(!rx.IsMatch(input_IBAN.Text))
+            if (!rx.IsMatch(input_IBAN.Text))
             {
                 MessageBox.Show("Deine IBAN ist inkorrekt. Bitte überprüfe sie und versuche es erneut.");
                 return false;
-            } 
+            }
+            if (!rxName.IsMatch(input_Name.Text))
+            {
+                MessageBox.Show("Bitte gib einen gültigen Namen ein.");
+                return false;
+            }
             return true;
         }
     }

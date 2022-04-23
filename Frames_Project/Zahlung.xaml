@@ -12,7 +12,13 @@
         <DockPanel LastChildFill="False">
             <TextBlock DockPanel.Dock="Top" Height="80" Background="black" Foreground="WhiteSmoke" FontWeight="Bold" TextAlignment="Center" FontSize="50">Zahlung</TextBlock>
 
-            <StackPanel DockPanel.Dock="Top">
+            <StackPanel DockPanel.Dock="Top" Margin="20, 0">
+                <Label FontSize="15" Content="Name des Kontoinhabers" VerticalAlignment="Center"/>
+                <TextBox x:Name="input_Name" FontSize="15" VerticalContentAlignment="Center" Width="500" HorizontalAlignment="Left"/>
+
+            </StackPanel>
+            
+            <StackPanel DockPanel.Dock="Top" Margin="20, 0">
                 <Label FontSize="15" Content="IBAN" VerticalAlignment="Center"/>
                 <TextBox x:Name="input_IBAN" FontSize="15" VerticalContentAlignment="Center" Width="500" HorizontalAlignment="Left"/>
 

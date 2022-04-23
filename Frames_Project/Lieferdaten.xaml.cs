@@ -45,7 +45,7 @@ namespace Frames_Project
             {
                 Person person = new Person(input_Name.Text.ToString(), input_Street.Text.ToString(), input_PLZ.Text.ToString(), input_Town.Text.ToString(), input_Email.Text.ToString(), input_Phone.Text.ToString());
                 
-                MessageBox.Show("Hat geklappt");
+                //MessageBox.Show("Hat geklappt");
                 this.NavigationService.Navigate(new Zahlung(products, person));
             }
         }

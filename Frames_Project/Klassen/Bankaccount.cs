@@ -9,9 +9,11 @@ namespace Frames_Project.Klassen
     public class Bankaccount
     {
         public string IBAN { get; private set; }
+        public string name { get; private set; }
 
-        public Bankaccount(string iban)
+        public Bankaccount(string name, string iban)
         {
+            this.name = name;
             this.IBAN = iban;
         }
 

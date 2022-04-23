@@ -24,5 +24,16 @@ namespace Frames_Project
         {
             InitializeComponent();
         }
+
+        private void btn_back_click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.GoBack();
+        }
+
+        private void btn_weiter_click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.RemoveBackEntry();
+            this.NavigationService.Navigate(new Shop());
+        }
     }
 }

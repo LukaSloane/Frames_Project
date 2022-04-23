@@ -51,11 +51,14 @@ namespace Frames_Project
             town.Content = person.town;
             email.Content = person.email;
             phone.Content = person.phone;
+            kontoinhaber.Content = konto.name;
+            iban.Content = konto.IBAN;
 
 
             foreach (Product p in products)
             {
-            
+
+                itemList.Items.Add($"{p.count} x {p.name}");
                 //lbxWaren.Items.Add($"{p.Anzahl}x {p.Bezeichnung}");
               
             }
