@@ -13,16 +13,20 @@
             <TextBlock DockPanel.Dock="Top" Height="80" Background="black" Foreground="WhiteSmoke" FontWeight="Bold" TextAlignment="Center" FontSize="50">Übersicht</TextBlock>
 
             <StackPanel DockPanel.Dock="Top">
-                <TextBlock FontSize="20" Text="Lieferdaten" HorizontalAlignment="Center" Margin="5, 20, 5,25" FontWeight="bold"></TextBlock>
+                <TextBlock FontSize="20" Text="Lieferdaten" HorizontalAlignment="Center" Margin="5, 10, 5,5" FontWeight="bold"></TextBlock>
                 
-                <TextBlock x:Name="name" FontSize="15" HorizontalAlignment="Center" Margin="3"></TextBlock>
-                <TextBlock x:Name="street" FontSize="15" HorizontalAlignment="Center" Margin="3"></TextBlock>
-                <TextBlock x:Name="plz" FontSize="15" HorizontalAlignment="Center" Margin="3"></TextBlock>
-                <TextBlock x:Name="town" FontSize="15" HorizontalAlignment="Center" Margin="3"></TextBlock>
-                <TextBlock x:Name="email" FontSize="15" HorizontalAlignment="Center" Margin="3"></TextBlock>
-                <TextBlock x:Name="phone" FontSize="15" HorizontalAlignment="Center" Margin="3"></TextBlock>
-                <TextBlock x:Name="iban" FontSize="15" HorizontalAlignment="Center" Margin="3"></TextBlock>
+                <Label x:Name="name" FontSize="15" HorizontalAlignment="Center"></Label>
+                <Label x:Name="street" FontSize="15" HorizontalAlignment="Center"></Label>
+                <Label x:Name="plz" FontSize="15" HorizontalAlignment="Center" ></Label>
+                <Label x:Name="town" FontSize="15" HorizontalAlignment="Center"></Label>
+                <Label x:Name="email" FontSize="15" HorizontalAlignment="Center"></Label>
+                <Label x:Name="phone" FontSize="15" HorizontalAlignment="Center" ></Label>
+                <Label x:Name="iban" FontSize="15" HorizontalAlignment="Center" ></Label>
                 
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Center">
+                <Label FontSize="20" Content="Artikel" FontWeight="Bold"></Label>
+                <ListBox Background="AliceBlue" x:Name="itemList" FontSize="15" />
 
             </StackPanel>
 

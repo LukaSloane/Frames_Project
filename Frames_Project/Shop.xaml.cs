@@ -69,7 +69,7 @@ namespace Frames_Project
                         products.Add(new Product(productLabels[i].Content.ToString()) { count = Convert.ToInt32(textboxList[i].Text) });
                     }
                 }
-                MessageBox.Show("" + products.Count);
+ 
                 if(products.Count > 0)
                 {
                     this.NavigationService.Navigate(new Lieferdaten(products));

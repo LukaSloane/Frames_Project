@@ -43,7 +43,7 @@ namespace Frames_Project
         {
             if(validateUserInput())
             {
-                Person person = new Person(input_Name.ToString(), input_Street.ToString(), input_PLZ.ToString(), input_Town.ToString(), input_Email.ToString(), input_Phone.ToString());
+                Person person = new Person(input_Name.Text.ToString(), input_Street.Text.ToString(), input_PLZ.Text.ToString(), input_Town.Text.ToString(), input_Email.Text.ToString(), input_Phone.Text.ToString());
                 
                 MessageBox.Show("Hat geklappt");
                 this.NavigationService.Navigate(new Zahlung(products, person));
@@ -60,7 +60,7 @@ namespace Frames_Project
             Regex rxName = new Regex(@"^[a-zA-ZäöüÄÖÜß]{2,12}\s[a-zA-ZäöüÄÖÜß]{2,12}(\s[a-zA-ZäöüÄÖÜß]{2,12})?$");
             Regex rxStreet = new Regex(@"^[a-zA-ZßäöüÄÖÜ]{5,25}\s([a-zA-ZßäöüÄÖÜ]{3,9}\s)?[0-9]{1,2}(\s?[a-zA-ZßäöüÄÖÜ])?$");
             Regex rxPLZ = new Regex(@"^[0-9]{5}$");
-            Regex rxTown = new Regex(@"^[a-zA-Z]{3,20}(\s[a-zA-ZßäöüÄÖÜ]{3,20})?$");
+            Regex rxTown = new Regex(@"^[a-zA-ZßäöüÄÖÜ]{3,20}(\s[a-zA-ZßäöüÄÖÜ]{3,20})?$");
             Regex rxPhone = new Regex(@"^[0-9]{10,15}$");
             Regex rxEmail = new Regex(@"^[a-zA-ZäöüÄÖÜ0-9_\-\.]{4,20}@[a-zA-Z]{3,15}[\.][a-z]{2,5}([\.][a-z]{2})?$");
 

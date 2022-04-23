@@ -45,12 +45,21 @@ namespace Frames_Project
 
         private void UserDataOverview()
         {
-            name.Text += person.name;
-            street.Text = person.street;
-            plz.Text = person.plz;
-            town.Text = person.town;
-            email.Text = person.email;
-            phone.Text = person.phone;
+            name.Content += person.name;
+            street.Content = person.street;
+            plz.Content = person.plz;
+            town.Content = person.town;
+            email.Content = person.email;
+            phone.Content = person.phone;
+
+
+            foreach (Product p in products)
+            {
+            
+                //lbxWaren.Items.Add($"{p.Anzahl}x {p.Bezeichnung}");
+              
+            }
+
         }
 
         private void btn_weiter_click(object sender, RoutedEventArgs e)
