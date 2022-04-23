@@ -97,5 +97,13 @@ namespace Frames_Project
 
             return valid;
         }
+
+        private void btn_reset_click(object sender, RoutedEventArgs e)
+        {
+            for (int i = 0; i < textboxList.Count; i++)
+            {
+                textboxList[i].Text = "0";
+            }
+        }
     }
 }

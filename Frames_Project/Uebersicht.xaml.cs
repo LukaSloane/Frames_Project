@@ -32,5 +32,19 @@ namespace Frames_Project
             this.konto = konto;
             InitializeComponent();
         }
+
+
+
+
+        private void btn_back_click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.GoBack();
+        }
+
+        private void btn_weiter_click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Bestaetigung());
+
+        }
     }
 }
