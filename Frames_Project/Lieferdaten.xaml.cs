@@ -61,7 +61,7 @@ namespace Frames_Project
             Regex rxStreet = new Regex(@"^[a-zA-ZßäöüÄÖÜ]{5,25}\s([a-zA-ZßäöüÄÖÜ]{3,9}\s)?[0-9]{1,2}(\s?[a-zA-ZßäöüÄÖÜ])?$");
             Regex rxPLZ = new Regex(@"^[0-9]{5}$");
             Regex rxTown = new Regex(@"^[a-zA-ZßäöüÄÖÜ]{3,20}(\s[a-zA-ZßäöüÄÖÜ]{3,20})?$");
-            Regex rxPhone = new Regex(@"^[0-9]{8,13}$");
+            Regex rxPhone = new Regex(@"^0[0-9]{7,12}$");
             Regex rxEmail = new Regex(@"^[a-zA-ZäöüÄÖÜ0-9_\-\.]{4,20}@[a-zA-Z]{3,15}[\.][a-z]{2,5}([\.][a-z]{2})?$");
 
 
