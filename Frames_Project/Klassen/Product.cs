@@ -11,6 +11,10 @@ namespace Frames_Project.Klassen
         public string name { get; private set; }
         public int count { get; private set; }
         
+        public Product(string name)
+        {
+            this.name = name;
+        }
 
     }
 }

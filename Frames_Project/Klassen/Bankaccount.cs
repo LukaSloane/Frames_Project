@@ -8,5 +8,8 @@ namespace Frames_Project.Klassen
 {
     class Bankaccount
     {
+        public string IBAN { get; private set; }
+
+        
     }
 }

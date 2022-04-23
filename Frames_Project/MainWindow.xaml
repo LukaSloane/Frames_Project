@@ -6,9 +6,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frames_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="OnLoad" ResizeMode="CanMinimize">
+        Title="MainWindow" Height="550" Width="800" Loaded="OnLoad" ResizeMode="CanMinimize">
     <Grid>
-        <Frame Name="placeholder" Width="700" Height="400" Background="LightYellow"></Frame>
-        
+        <Frame Name="placeholder" NavigationUIVisibility="Hidden" Focusable="False"/>
+
     </Grid>
 </Window>

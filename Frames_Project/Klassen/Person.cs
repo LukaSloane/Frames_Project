@@ -8,5 +8,13 @@ namespace Frames_Project.Klassen
 {
     class Person
     {
+        string foreName;
+        string lastName;
+        string street;
+        string houseNumber;
+        string plz;
+        string town;
+        string phoneNumber;
+        string emailAddress;
     }
 }
