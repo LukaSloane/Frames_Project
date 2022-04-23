@@ -31,6 +31,8 @@ namespace Frames_Project
             this.person = person;
             this.konto = konto;
             InitializeComponent();
+
+            UserDataOverview();
         }
 
 
@@ -39,6 +41,16 @@ namespace Frames_Project
         private void btn_back_click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.GoBack();
+        }
+
+        private void UserDataOverview()
+        {
+            name.Text += person.name;
+            street.Text = person.street;
+            plz.Text = person.plz;
+            town.Text = person.town;
+            email.Text = person.email;
+            phone.Text = person.phone;
         }
 
         private void btn_weiter_click(object sender, RoutedEventArgs e)

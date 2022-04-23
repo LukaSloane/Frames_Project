@@ -70,7 +70,11 @@ namespace Frames_Project
                     }
                 }
                 MessageBox.Show("" + products.Count);
-                this.NavigationService.Navigate(new Lieferdaten(products));
+                if(products.Count > 0)
+                {
+                    this.NavigationService.Navigate(new Lieferdaten(products));
+                }
+                
             }
 
         }
