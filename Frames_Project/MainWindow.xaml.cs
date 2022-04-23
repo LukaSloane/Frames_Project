@@ -24,5 +24,10 @@ namespace Frames_Project
         {
             InitializeComponent();
         }
+
+        private void OnLoad(object sender, RoutedEventArgs e)
+        {
+            placeholder.NavigationService.Navigate(new Shop());
+        }
     }
 }
