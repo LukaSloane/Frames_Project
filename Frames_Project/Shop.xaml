@@ -16,42 +16,42 @@
             <StackPanel DockPanel.Dock="Top" Margin="30, 10, 10, 0">
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="product1_count" Width="40" HorizontalAlignment="Left" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0"/>
-                    <Label x:Name="product1" Padding="10" FontSize="15">Straus Koriander</Label>
+                    <Label x:Name="product1" Padding="10" FontSize="15"></Label>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel DockPanel.Dock="Top" Margin="30, 10, 10, 0">
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="product2_count" Width="40" HorizontalAlignment="Left" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0"/>
-                    <Label x:Name="product2" Padding="10" FontSize="15">Avocado</Label>
+                    <Label x:Name="product2" Padding="10" FontSize="15"></Label>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel DockPanel.Dock="Top" Margin="30, 10, 10, 0">
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="product3_count" Width="40" HorizontalAlignment="Left" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0"/>
-                    <Label x:Name="product3" Padding="10" FontSize="15">Tomaten</Label>
+                    <Label x:Name="product3" Padding="10" FontSize="15"></Label>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel DockPanel.Dock="Top" Margin="30, 10, 10, 0">
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="product4_count" Width="40" HorizontalAlignment="Left" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0"/>
-                    <Label x:Name="product4" Padding="10" FontSize="15">Dose Mais</Label>
+                    <Label x:Name="product4" Padding="10" FontSize="15"></Label>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel DockPanel.Dock="Top" Margin="30, 10, 10, 0">
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="product5_count" Width="40" HorizontalAlignment="Left" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0"/>
-                    <Label x:Name="product5" Padding="10" FontSize="15">Dose Kidneybohnen</Label>
+                    <Label x:Name="product5" Padding="10" FontSize="15"></Label>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel DockPanel.Dock="Top" Margin="30, 10, 10, 0">
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="product6_count"  Width="40" HorizontalAlignment="Left" FontSize="15" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Text="0"/>
-                    <Label x:Name="product6" Padding="10" FontSize="15">Rote Zwiebeln</Label>
+                    <Label x:Name="product6" Padding="10" FontSize="15"></Label>
                 </StackPanel>
             </StackPanel>
 

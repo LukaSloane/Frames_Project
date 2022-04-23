@@ -22,79 +22,54 @@ namespace Frames_Project
     /// </summary>
     public partial class Shop : Page
     {
+
+        private List<TextBox> textboxList;
+        private List<Label> productLabels;
+        
         public Shop()
         {
+            
             InitializeComponent();
+            product1.Content = "Koriander";
+            product2.Content = "Mais";
+            product3.Content = "Kidneybohnen";
+            product4.Content = "Tomate";
+            product5.Content = "Avocado";
+            product6.Content = "Paprika";
+
+            productLabels = new List<Label>();
+            productLabels.Add(product1);
+            productLabels.Add(product2);
+            productLabels.Add(product3);
+            productLabels.Add(product4);
+            productLabels.Add(product5);
+            productLabels.Add(product6);
+
+            textboxList = new List<TextBox>();
+            textboxList.Add(product1_count);
+            textboxList.Add(product2_count);
+            textboxList.Add(product3_count);
+            textboxList.Add(product4_count);
+            textboxList.Add(product5_count);
+            textboxList.Add(product6_count);
         }
 
         private void btn_weiter_click(object sender, RoutedEventArgs e)
         {
-            bool allIsValid = true;
+           
 
             List<Product> products = new List<Product>();
 
-            if(validateUserInput(product1_count.Text, product1.Content.ToString()) && product1_count.Text != "0")
+            if(validateUserInput())
             {
-                products.Add(new Product(product1.Content.ToString()) { count = Convert.ToInt32(product1_count.Text) });
-            }
-            else
-            {
-                allIsValid = false;
-            }
-
-            if (validateUserInput(product2_count.Text, product2.Content.ToString()) && product2_count.Text != "0")
-            {
-                products.Add(new Product(product2.Content.ToString()) { count = Convert.ToInt32(product2_count.Text) });
-            }
-            else
-            {
-                allIsValid = false;
-            }
-
-            if (validateUserInput(product3_count.Text, product3.Content.ToString()) && product3_count.Text != "0")
-            {
-                products.Add(new Product(product3.Content.ToString()) { count = Convert.ToInt32(product3_count.Text) });
-            }
-            else
-            {
-                allIsValid = false;
-            }
-
-            if (validateUserInput(product4_count.Text, product4.Content.ToString()) && product4_count.Text != "0")
-            {
-                products.Add(new Product(product4.Content.ToString()) { count = Convert.ToInt32(product4_count.Text) });
-            }
-            else
-            {
-                allIsValid = false;
-            }
-
-            if (validateUserInput(product5_count.Text, product5.Content.ToString()) && product5_count.Text != "0")
-            {
-                products.Add(new Product(product5.Content.ToString()) { count = Convert.ToInt32(product5_count.Text) });
-            }
-            else
-            {
-                allIsValid = false;
-            }
-
-            if (validateUserInput(product6_count.Text, product6.Content.ToString()) && product6_count.Text != "0")
-            {
-                products.Add(new Product(product6.Content.ToString()) { count = Convert.ToInt32(product6_count.Text) });
-            }
-            else
-            {
-                allIsValid = false;
-            }
-
-            MessageBox.Show("" + products.Count);
-            for (int i = 0; i < products.Count; i++)
-            {
-                MessageBox.Show("" + products[i].name);
-            }
-
-            if(allIsValid)
-            {
+                for (int i = 0; i < textboxList.Count; i++)
+                {
+                    if(textboxList[i].Text != "0")
+                    {
+                        products.Add(new Product(productLabels[i].Content.ToString()) { count = Convert.ToInt32(textboxList[i].Text) });
+                    }
+                }
+                MessageBox.Show("" + products.Count);
                 this.NavigationService.Navigate(new Lieferdaten(products));
             }
 
@@ -102,22 +77,25 @@ namespace Frames_Project
 
 
 
-        private bool validateUserInput(string input, string content)
+        private bool validateUserInput()
         {
             Regex rx = new Regex(@"^[0-9]{1,3}$");
             //Regex rx2 = new Regex(@"^[1-9]{1}([0-9]{1,2})?$");
             
-            bool valide = false;
-            
-            if(rx.IsMatch(input)) {
-                valide = true;
-            }
-            else
+            bool valid = true;
+
+            for (int i = 0; i < textboxList.Count; i++)
             {
-                MessageBox.Show($"Bitte überprüfe die Anzahl von { content } versuche es erneut.");
+                if(!rx.IsMatch(textboxList[i].Text))
+                {
+                    MessageBox.Show($"Es ist ein Fehler aufgetreten. Bitte überprüfe deine Eingaben.");
+                    valid = false;
+                    break;
+                    
+                }
             }
 
-            return valide;
+            return valid;
         }
     }
 }
