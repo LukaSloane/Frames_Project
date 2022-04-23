@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace Frames_Project.Klassen
 {
-    class Bankaccount
+    public class Bankaccount
     {
         public string IBAN { get; private set; }
+
+        public Bankaccount(string iban)
+        {
+            this.IBAN = iban;
+        }
 
         
     }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Frames_Project.Klassen;
 
 namespace Frames_Project
 {
@@ -20,8 +21,12 @@ namespace Frames_Project
     /// </summary>
     public partial class Zahlung : Page
     {
-        public Zahlung()
+        List<Product> products;
+        Person person;
+        public Zahlung(List<Product> products, Person person)
         {
+            this.products = products;
+            this.person = person;
             InitializeComponent();
         }
     }
