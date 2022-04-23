@@ -8,7 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Lieferdaten">
 
-    <Grid>
+    <Grid Background="AliceBlue">
+        <DockPanel LastChildFill="False">
+            <TextBlock DockPanel.Dock="Top" Height="80" Background="black" Foreground="WhiteSmoke" FontWeight="Bold" TextAlignment="Center" FontSize="50">Lieferdaten</TextBlock>
+        </DockPanel>
         
     </Grid>
 </Page>

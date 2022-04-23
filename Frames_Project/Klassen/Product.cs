@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Frames_Project.Klassen
 {
-    class Product
+    public class Product
     {
         public string name { get; private set; }
-        public int count { get; private set; }
+        public int count { get;  set; }
         
         public Product(string name)
         {

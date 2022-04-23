@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Frames_Project.Klassen;
 
 namespace Frames_Project
 {
@@ -20,8 +21,11 @@ namespace Frames_Project
     /// </summary>
     public partial class Lieferdaten : Page
     {
-        public Lieferdaten()
+       private List<Product> products;
+
+        public Lieferdaten(List<Product> products)
         {
+            this.products = products;
             InitializeComponent();
         }
     }
