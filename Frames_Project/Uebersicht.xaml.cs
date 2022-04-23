@@ -46,13 +46,13 @@ namespace Frames_Project
         private void UserDataOverview()
         {
             name.Content += person.name;
-            street.Content = person.street;
-            plz.Content = person.plz;
-            town.Content = person.town;
-            email.Content = person.email;
-            phone.Content = person.phone;
-            kontoinhaber.Content = konto.name;
-            iban.Content = konto.IBAN;
+            street.Content += person.street;
+            plz.Content += person.plz;
+            town.Content += person.town;
+            email.Content += person.email;
+            phone.Content += person.phone;
+            kontoinhaber.Content += konto.name;
+            iban.Content += konto.IBAN;
 
 
             foreach (Product p in products)

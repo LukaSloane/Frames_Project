@@ -16,14 +16,15 @@
                 <StackPanel DockPanel.Dock="Top" Margin="0, 0, 50, 0" Width="500">
                     <TextBlock FontSize="20" Text="Lieferdaten" HorizontalAlignment="Center" Margin="5, 10, 5,5" FontWeight="bold"></TextBlock>
 
-                    <Label x:Name="name" FontSize="15" HorizontalAlignment="Center"></Label>
-                    <Label x:Name="street" FontSize="15" HorizontalAlignment="Center"></Label>
-                    <Label x:Name="plz" FontSize="15" HorizontalAlignment="Center" ></Label>
-                    <Label x:Name="town" FontSize="15" HorizontalAlignment="Center"></Label>
-                    <Label x:Name="email" FontSize="15" HorizontalAlignment="Center"></Label>
-                    <Label x:Name="phone" FontSize="15" HorizontalAlignment="Center" ></Label>
-                    <Label x:Name="kontoinhaber" FontSize="15" HorizontalAlignment="Center" ></Label>
-                    <Label x:Name="iban" FontSize="15" HorizontalAlignment="Center" ></Label>
+                    <Label x:Name="name" FontSize="15" HorizontalAlignment="Center" Content="Name: "></Label>
+                    <Label x:Name="street" FontSize="15" HorizontalAlignment="Center" Content="Street and nr: "></Label>
+                    <Label x:Name="plz" FontSize="15" HorizontalAlignment="Center" Content="PLZ: "></Label>
+                    <Label x:Name="town" FontSize="15" HorizontalAlignment="Center" Content="Town: "></Label>
+                    <Label x:Name="email" FontSize="15" HorizontalAlignment="Center" Content="E-Mail: "></Label>
+                    <Label x:Name="phone" FontSize="15" HorizontalAlignment="Center" Content="Phone nr: "></Label>
+                    <Label FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" Content="Konto Informationen:"></Label>
+                    <Label x:Name="kontoinhaber" FontSize="15" HorizontalAlignment="Center" Content="Kontoinhaber: "></Label>
+                    <Label x:Name="iban" FontSize="15" HorizontalAlignment="Center" Content="IBAN: "></Label>
 
 
                 </StackPanel>
@@ -37,7 +38,7 @@
 
 
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
-                <Button DockPanel.Dock="Right" Margin="0, 0, 184, 0" Height="50" Width="300" Background="DarkCyan" Foreground="White" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="1" Click="btn_back_click">Zuruück</Button>
+                <Button DockPanel.Dock="Right" Margin="0, 0, 184, 0" Height="50" Width="300" Background="DarkCyan" Foreground="White" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="1" Click="btn_back_click">Zurück</Button>
                 <Button DockPanel.Dock="Right" Height="50" Width="300" Background="DarkCyan" Foreground="White" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="1" Click="btn_weiter_click">Weiter</Button>
             </StackPanel>
 
