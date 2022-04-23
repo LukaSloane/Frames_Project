@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Frames_Project.Klassen;
 
 namespace Frames_Project
 {
@@ -20,8 +21,15 @@ namespace Frames_Project
     /// </summary>
     public partial class Uebersicht : Page
     {
-        public Uebersicht()
+
+        List<Product> products;
+        Person person;
+        Bankaccount konto;
+        public Uebersicht(List<Product> products, Person person, Bankaccount konto)
         {
+            this.products = products;
+            this.person = person;
+            this.konto = konto;
             InitializeComponent();
         }
     }

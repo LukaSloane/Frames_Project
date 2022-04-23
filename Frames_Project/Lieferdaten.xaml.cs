@@ -23,20 +23,20 @@ namespace Frames_Project
     public partial class Lieferdaten : Page
     {
        private List<Product> products;
-        private List<TextBox> userData;
+       //private List<TextBox> userData;
 
         public Lieferdaten(List<Product> products)
         {
             this.products = products;
             InitializeComponent();
 
-            userData = new List<TextBox>();
-            userData.Add(input_Name);
-            userData.Add(input_Street);
-            userData.Add(input_PLZ);
-            userData.Add(input_Town);
-            userData.Add(input_Email);
-            userData.Add(input_Phone);
+            //userData = new List<TextBox>();
+            //userData.Add(input_Name);
+            //userData.Add(input_Street);
+            //userData.Add(input_PLZ);
+            //userData.Add(input_Town);
+            //userData.Add(input_Email);
+            //userData.Add(input_Phone);
         }
 
         private void btn_weiter_click(object sender, RoutedEventArgs e)
@@ -46,6 +46,7 @@ namespace Frames_Project
                 Person person = new Person(input_Name.ToString(), input_Street.ToString(), input_PLZ.ToString(), input_Town.ToString(), input_Email.ToString(), input_Phone.ToString());
                 
                 MessageBox.Show("Hat geklappt");
+                this.NavigationService.Navigate(new Zahlung(products, person));
             }
         }
 

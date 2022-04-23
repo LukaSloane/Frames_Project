@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Frames_Project.Klassen;
+using System.Text.RegularExpressions;
 
 namespace Frames_Project
 {
@@ -28,6 +29,33 @@ namespace Frames_Project
             this.products = products;
             this.person = person;
             InitializeComponent();
+        }
+
+        private void btn_back_click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.GoBack();
+        }
+
+        private void btn_weiter_click(object sender, RoutedEventArgs e)
+        {
+            if(validateIBAN())
+            {
+                Bankaccount konto = new Bankaccount(input_IBAN.Text.ToString());
+                this.NavigationService.Navigate(new Uebersicht(products, person, konto));
+            }
+        }
+
+        private bool validateIBAN()
+        {
+            Regex rx = new Regex(@"^DE[0-9]{2}(\s)?[0-9]{4}(\s)?[0-9]{4}(\s)?[0-9]{4}(\s)?[0-9]{4}(\s)?[0-9]{2}$");
+
+
+            if(!rx.IsMatch(input_IBAN.Text))
+            {
+                MessageBox.Show("Deine IBAN ist inkorrekt. Bitte überprüfe sie und versuche es erneut.");
+                return false;
+            } 
+            return true;
         }
     }
 }
