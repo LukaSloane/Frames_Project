@@ -83,7 +83,7 @@ namespace Frames_Project
 
         private bool validateUserInput()
         {
-            Regex rx = new Regex(@"^([1-9][0-9]{0,2})$");
+            Regex rx = new Regex(@"^[0-9]{1,3}$");
             //Regex rx2 = new Regex(@"^[1-9]{1}([0-9]{1,2})?$");
             
             bool valid = true;
