@@ -5,12 +5,51 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Frames_Project"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="800"
       Title="Lieferdaten">
 
     <Grid Background="AliceBlue">
         <DockPanel LastChildFill="False">
             <TextBlock DockPanel.Dock="Top" Height="80" Background="black" Foreground="WhiteSmoke" FontWeight="Bold" TextAlignment="Center" FontSize="50">Lieferdaten</TextBlock>
+            
+            <StackPanel DockPanel.Dock="Top">
+                <Label FontSize="15" Content="Name" VerticalAlignment="Center"></Label>
+                <TextBox x:Name="input_Name" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+            </StackPanel>
+            
+            <StackPanel DockPanel.Dock="Top">
+                <Label FontSize="15" Content="Street and Number" VerticalAlignment="Center"></Label>
+                <TextBox x:Name="input_Street" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+            </StackPanel>
+
+            <StackPanel DockPanel.Dock="Top">
+                <Label FontSize="15" Content="PLZ" VerticalAlignment="Center"></Label>
+                <TextBox x:Name="input_PLZ" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+            </StackPanel>
+
+            <StackPanel DockPanel.Dock="Top">
+                <Label FontSize="15" Content="Town" VerticalAlignment="Center"></Label>
+                <TextBox x:Name="input_Town" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+            </StackPanel>
+
+            <StackPanel DockPanel.Dock="Top">
+                <Label FontSize="15" Content="Email" VerticalAlignment="Center"></Label>
+                <TextBox x:Name="input_Email" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+            </StackPanel>
+
+            <StackPanel DockPanel.Dock="Top">
+                <Label FontSize="15" Content="Phone" VerticalAlignment="Center"></Label>
+                <TextBox x:Name="input_Phone" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
+                <Button DockPanel.Dock="Right" Margin="0, 0, 184, 0" Height="50" Width="300" Background="DarkCyan" Foreground="White" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="1" Click="btn_back_click">Zuruück</Button>
+                <Button DockPanel.Dock="Right" Height="50" Width="300" Background="DarkCyan" Foreground="White" FontSize="20" FontWeight="Bold" BorderBrush="Black" BorderThickness="1" Click="btn_weiter_click">Weiter</Button>
+            </StackPanel>
+
+
+
+
         </DockPanel>
         
     </Grid>

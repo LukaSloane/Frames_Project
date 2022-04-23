@@ -6,15 +6,29 @@ using System.Threading.Tasks;
 
 namespace Frames_Project.Klassen
 {
-    class Person
+    public class Person
     {
-        string foreName;
-        string lastName;
-        string street;
-        string houseNumber;
-        string plz;
-        string town;
-        string phoneNumber;
-        string emailAddress;
+        public string name { get; private set;  }
+        public string street { get; private set; }
+        public string plz { get; private set; }
+        public string town
+        {
+            get; private set;
+         }
+        public string email
+        {
+            get; private set;
+         }
+        public string phone { get; private set; }
+
+        public Person(string name, string street, string plz, string town, string email, string phone)
+        {
+            this.name = name;
+            this.street = street;
+            this.plz = plz;
+            this.town = town;
+            this.email = email;
+            this.phone = phone;
+        }
     }
 }
