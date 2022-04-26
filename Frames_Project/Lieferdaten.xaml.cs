@@ -67,22 +67,22 @@ namespace Frames_Project
 
             if(!rxName.IsMatch(input_Name.Text))
             {
-                MessageBox.Show("Bitte gib einen richtigen Namen ein.");
+                MessageBox.Show("Bitte gib einen validen Namen ein.");
                 return false;
             }
             if(!rxStreet.IsMatch(input_Street.Text))
             {
-                MessageBox.Show("Bitte gib eine richtige Straße mit Hausnummer ein");
+                MessageBox.Show("Bitte gib eine valide Straße mit Hausnummer ein");
                 return false;
             }
             if(!rxPLZ.IsMatch(input_PLZ.Text))
             {
-                MessageBox.Show("Bitte gib eine richtige Postleitzahl ein.");
+                MessageBox.Show("Bitte gib eine valide Postleitzahl ein.");
                 return false;
             }
             if(!rxTown.IsMatch(input_Town.Text))
             {
-                MessageBox.Show("Bitte gib einen richtigen Ort ein.");
+                MessageBox.Show("Bitte gib einen validen Ort ein.");
                 return false;
             }
             if(!rxEmail.IsMatch(input_Email.Text))
@@ -92,7 +92,7 @@ namespace Frames_Project
             }
             if(!rxPhone.IsMatch(input_Phone.Text))
             {
-                MessageBox.Show("Bitte gib eine richtige Telefonnumer ein.");
+                MessageBox.Show("Bitte gib eine valide Telefonnumer ein.");
                 return false;
             }
 
