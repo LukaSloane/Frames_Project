@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PdfSharp.Pdf;
+using PdfSharp.Drawing;
 
 namespace Frames_Project
 {
@@ -34,6 +36,36 @@ namespace Frames_Project
         {
             this.NavigationService.RemoveBackEntry();
             this.NavigationService.Navigate(new Shop());
+        }
+
+        private void CreatePDF(object sender, RoutedEventArgs e)
+        {
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+
+            PdfDocument document = new PdfDocument();
+
+            PdfPage page = document.AddPage();
+
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+
+            XFont font = new XFont("Arial", 20);
+
+            gfx.DrawString("First line of text", font, XBrushes.Black,
+                new XRect(0, 0, page.Width, page.Height),
+                XStringFormats.Center);
+
+            gfx.DrawString("Second line of text", font, XBrushes.Violet,
+                new XRect(0, 0, page.Width, page.Height),
+                XStringFormats.BottomLeft);
+
+            //gfx.DrawString("Third line of text", font, XBrushes.Tomato,
+            //    new XRect(0, 0, page.Width, page.Height),
+            //    XStringFormats.BaseLineRight);
+
+            gfx.DrawString("Fourth line of text", font, XBrushes.Violet,
+                new XPoint(100, 300));
+
+            document.Save("C:\\Users\\lskessel\\Downloads\\testpdf.pdf");
         }
     }
 }
