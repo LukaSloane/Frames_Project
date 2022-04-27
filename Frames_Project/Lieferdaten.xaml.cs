@@ -58,7 +58,7 @@ namespace Frames_Project
         private bool validateUserInput()
         {
             Regex rxName = new Regex(@"^[a-zA-ZäöüÄÖÜß]{2,12}\s[a-zA-ZäöüÄÖÜß]{2,12}(\s[a-zA-ZäöüÄÖÜß]{2,12})?$");
-            Regex rxStreet = new Regex(@"^[a-zA-ZßäöüÄÖÜ]{5,25}\s([a-zA-ZßäöüÄÖÜ]{3,9}\s)?[0-9]{1,2}(\s?[a-zA-ZßäöüÄÖÜ])?$");
+            Regex rxStreet = new Regex(@"^[a-zA-ZßäöüÄÖÜ]{5,25}\.?\s?(-?[a-zA-ZßäöüÄÖÜ]{3,9}\.?\s)?(\.-)?[0-9]{1,2}(\s?[a-zA-ZßäöüÄÖÜ])?$");
             Regex rxPLZ = new Regex(@"^[0-9]{5}$");
             Regex rxTown = new Regex(@"^[a-zA-ZßäöüÄÖÜ]{3,20}(\s[a-zA-ZßäöüÄÖÜ]{3,20})?$");
             Regex rxPhone = new Regex(@"^(\+[1-9][0-9]{0,2}|0)(\s)?[1-9]{3,4}(\s)?[0-9]{4,17}$");

@@ -67,7 +67,7 @@ namespace Frames_Project
 
         private void btn_weiter_click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Bestaetigung());
+            this.NavigationService.Navigate(new Bestaetigung(person, products, konto));
 
         }
     }

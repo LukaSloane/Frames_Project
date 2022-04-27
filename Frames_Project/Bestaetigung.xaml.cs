@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using PdfSharp.Pdf;
 using PdfSharp.Drawing;
+using Frames_Project.Klassen;
 
 namespace Frames_Project
 {
@@ -22,8 +23,15 @@ namespace Frames_Project
     /// </summary>
     public partial class Bestaetigung : Page
     {
-        public Bestaetigung()
+
+        Person person;
+        List<Product> products;
+        Bankaccount konto;
+        public Bestaetigung(Person person, List<Product> products, Bankaccount konto)
         {
+            this.person = person;
+            this.products = products;
+            this.konto = konto;
             InitializeComponent();
         }
 
@@ -48,24 +56,51 @@ namespace Frames_Project
 
             XGraphics gfx = XGraphics.FromPdfPage(page);
 
-            XFont font = new XFont("Arial", 20);
+            XFont font = new XFont("Arial", 18);
+            XFont fontHeading = new XFont("Arial", 36);
+            XFont fontKonto = new XFont("Arial", 13);
 
-            gfx.DrawString("First line of text", font, XBrushes.Black,
-                new XRect(0, 0, page.Width, page.Height),
-                XStringFormats.Center);
+            //gfx.DrawString("First line of text", font, XBrushes.Black,
+            //    new XRect(0, 0, page.Width, page.Height),
+            //    XStringFormats.Center);
 
-            gfx.DrawString("Second line of text", font, XBrushes.Violet,
-                new XRect(0, 0, page.Width, page.Height),
-                XStringFormats.BottomLeft);
+
 
             //gfx.DrawString("Third line of text", font, XBrushes.Tomato,
             //    new XRect(0, 0, page.Width, page.Height),
             //    XStringFormats.BaseLineRight);
 
-            gfx.DrawString("Fourth line of text", font, XBrushes.Violet,
-                new XPoint(100, 300));
+            //gfx.DrawString("Fourth line of text", font, XBrushes.Violet,
+            //    new XPoint(100, 300));
 
-            document.Save("C:\\Users\\lskessel\\Downloads\\testpdf.pdf");
+            gfx.DrawString(person.name, font, XBrushes.Black,
+                new XPoint(400,80));
+            gfx.DrawString(person.street, font, XBrushes.Black,
+                new XPoint(400, 100));
+            gfx.DrawString(person.plz + " " + person.town, font, XBrushes.Black,
+                new XPoint(400, 120));           
+            gfx.DrawString(person.email, font, XBrushes.Black,
+                new XPoint(400, 140));
+            gfx.DrawString(person.phone, font, XBrushes.Black,
+                new XPoint(400, 160));
+            gfx.DrawString("Rechnung", fontHeading, XBrushes.Black,
+                new XPoint(200, 300));
+
+            gfx.DrawString($"Kontoinhaber: {konto.name}, IBAN: {konto.IBAN}", fontKonto, XBrushes.Gray,
+                new XRect(20, -10, page.Width, page.Height),
+                XStringFormats.BottomLeft);
+
+            int y = 350;
+
+            for (int i = 0; i < products.Count; i++)
+            {
+                gfx.DrawString(products[i].count + " x " + products[i].name, font, XBrushes.Black,
+                new XPoint(300, y));
+                y += 20;
+            }
+
+            document.Save("C:\\Users\\lskessel\\Downloads\\Rechnung.pdf");
+            //document.Save(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
         }
     }
 }
