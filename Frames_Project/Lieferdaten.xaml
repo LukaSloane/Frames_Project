@@ -11,35 +11,38 @@
     <Grid Background="AliceBlue">
         <DockPanel LastChildFill="False">
             <TextBlock DockPanel.Dock="Top" Height="80" Background="black" Foreground="WhiteSmoke" FontWeight="Bold" TextAlignment="Center" FontSize="50">Lieferdaten</TextBlock>
-            
-            <StackPanel DockPanel.Dock="Top">
-                <Label FontSize="15" Content="Name" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="input_Name" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
-            </StackPanel>
-            
-            <StackPanel DockPanel.Dock="Top">
-                <Label FontSize="15" Content="Street and Number" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="input_Street" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
-            </StackPanel>
 
             <StackPanel DockPanel.Dock="Top">
-                <Label FontSize="15" Content="PLZ" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="input_PLZ" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
-            </StackPanel>
 
-            <StackPanel DockPanel.Dock="Top">
-                <Label FontSize="15" Content="Town" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="input_Town" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
-            </StackPanel>
+                <StackPanel DockPanel.Dock="Top">
+                    <Label FontSize="15" Content="Name" VerticalAlignment="Center"></Label>
+                    <TextBox x:Name="input_Name" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+                </StackPanel>
 
-            <StackPanel DockPanel.Dock="Top">
-                <Label FontSize="15" Content="Email" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="input_Email" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
-            </StackPanel>
+                <StackPanel DockPanel.Dock="Top">
+                    <Label FontSize="15" Content="Street and Number" VerticalAlignment="Center"></Label>
+                    <TextBox x:Name="input_Street" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+                </StackPanel>
 
-            <StackPanel DockPanel.Dock="Top">
-                <Label FontSize="15" Content="Phone" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="input_Phone" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+                <StackPanel DockPanel.Dock="Top">
+                    <Label FontSize="15" Content="PLZ" VerticalAlignment="Center"></Label>
+                    <TextBox x:Name="input_PLZ" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+                </StackPanel>
+
+                <StackPanel DockPanel.Dock="Top">
+                    <Label FontSize="15" Content="Town" VerticalAlignment="Center"></Label>
+                    <TextBox x:Name="input_Town" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+                </StackPanel>
+
+                <StackPanel DockPanel.Dock="Top">
+                    <Label FontSize="15" Content="Email" VerticalAlignment="Center"></Label>
+                    <TextBox x:Name="input_Email" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+                </StackPanel>
+
+                <StackPanel DockPanel.Dock="Top">
+                    <Label FontSize="15" Content="Phone" VerticalAlignment="Center"></Label>
+                    <TextBox x:Name="input_Phone" FontSize="15" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left"></TextBox>
+                </StackPanel>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
